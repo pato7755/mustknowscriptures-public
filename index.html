@@ -1,242 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Must Know Scriptures</title>
-    <link rel="icon" type="image/png" href="icon.png">
-    <link rel="apple-touch-icon" href="icon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Must Know Scriptures</title>
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
 
-    <meta property="og:title" content="Must Know Scriptures">
-    <meta property="og:description" content="Memorize 1,000+ Bible verses with flip cards in English, French, Spanish & Portuguese. By Bishop Dag Heward-Mills.">
-    <meta property="og:image" content="https://mustknowscriptures.simplysend.net/icon.png">
-    <meta property="og:url" content="https://mustknowscriptures.simplysend.net">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://mustknowscriptures.simplysend.net/icon.png">
+<meta property="og:title" content="Must Know Scriptures">
+<meta property="og:description" content="Memorize 1,000+ Bible verses with flip cards in 4 languages. By Bishop Dag Heward-Mills.">
+<meta property="og:image" content="https://mustknowscriptures.simplysend.net/icon.png">
+<meta property="og:url" content="https://mustknowscriptures.simplysend.net">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mustknowscriptures.simplysend.net/icon.png">
 
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #ffffff;
-            color: #111;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 24px;
-        }
-
-        .container {
-            text-align: center;
-            max-width: 440px;
-            width: 100%;
-        }
-
-        .icon {
-            width: 108px;
-            height: 108px;
-            border-radius: 22px;
-            margin: 0 auto 24px;
-            display: block;
-            border: 1px solid #e5e5e5;
-        }
-
-        h1 {
-            font-size: 26px;
-            font-weight: 700;
-            color: #111;
-            margin-bottom: 6px;
-            letter-spacing: -0.5px;
-        }
-
-        .author {
-            font-size: 14px;
-            color: #888;
-            margin-bottom: 20px;
-        }
-
-        .tagline {
-            font-size: 15px;
-            color: #444;
-            line-height: 1.65;
-            margin-bottom: 8px;
-        }
-
-        .verse {
-            font-size: 13px;
-            color: #aaa;
-            font-style: italic;
-            margin-bottom: 36px;
-        }
-
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 36px;
-        }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 20px;
-            border-radius: 12px;
-            text-decoration: none;
-            transition: opacity 0.15s;
-        }
-
-        .btn:hover { opacity: 0.88; }
-
-        .btn-ios {
-            background: #000;
-            color: #fff;
-        }
-
-        .btn-android {
-            background: #01875f;
-            color: #fff;
-        }
-
-        .btn-text {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            line-height: 1.2;
-        }
-
-        .btn-sub {
-            font-size: 11px;
-            opacity: 0.75;
-            font-weight: 400;
-        }
-
-        .btn-main {
-            font-size: 17px;
-            font-weight: 700;
-        }
-
-        .divider {
-            border: none;
-            border-top: 1px solid #f0f0f0;
-            margin-bottom: 28px;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-bottom: 32px;
-            text-align: left;
-        }
-
-        .feature {
-            background: #f8f8f8;
-            border-radius: 10px;
-            padding: 12px 14px;
-        }
-
-        .feature-icon {
-            font-size: 20px;
-            margin-bottom: 6px;
-            display: block;
-        }
-
-        .feature-title {
-            font-size: 13px;
-            font-weight: 600;
-            color: #111;
-            margin-bottom: 2px;
-        }
-
-        .feature-desc {
-            font-size: 12px;
-            color: #888;
-            line-height: 1.4;
-        }
-
-        .languages {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .lang {
-            font-size: 12px;
-            color: #555;
-            background: #f3f3f3;
-            padding: 5px 12px;
-            border-radius: 20px;
-        }
-    </style>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#fdf6e3;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 24px;position:relative}
+.bg-lines{position:fixed;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 28px,rgba(139,100,20,0.06) 28px,rgba(139,100,20,0.06) 29px);pointer-events:none;z-index:0}
+.wrap{max-width:360px;width:100%;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1}
+.top{display:flex;align-items:center;gap:16px;margin-bottom:32px;width:100%}
+.app-icon{width:76px;height:76px;border-radius:16px;border:2px solid #c8a84b;object-fit:cover;display:block;flex-shrink:0}
+.titles{text-align:left}
+.app-name{font-family:'Playfair Display',serif;font-size:24px;font-weight:900;color:#2c1a00;line-height:1.1}
+.app-by{font-size:12px;color:#8b6914;letter-spacing:0.5px;margin-top:5px}
+.divider-ornament{color:#c8a84b;font-size:18px;letter-spacing:8px;margin-bottom:24px;opacity:0.6}
+.verse{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#3d2800;line-height:1.65;margin-bottom:8px;max-width:300px}
+.ref{font-size:11px;color:#c8a84b;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:32px}
+.buttons{display:flex;flex-direction:column;gap:10px;width:100%;margin-bottom:28px;align-items:center}
+.btn{display:flex;align-items:center;gap:12px;padding:13px 18px;border-radius:10px;text-decoration:none;min-width:220px;transition:opacity 0.15s}
+.btn:hover{opacity:0.88}
+.btn-ios{background:#2c1a00;color:#fdf6e3}
+.btn-android{background:#c8a84b;color:#2c1a00}
+.btn-text{display:flex;flex-direction:column;align-items:flex-start;line-height:1.2}
+.btn-sub{font-size:10px;opacity:0.65;font-weight:400}
+.btn-main{font-size:16px;font-weight:700}
+.sep{width:60px;height:1px;background:rgba(200,168,75,0.4);margin:4px auto 24px}
+.langs{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.lang{font-size:11px;color:#8b6914;background:rgba(200,168,75,0.12);border:1px solid rgba(200,168,75,0.3);padding:4px 10px;border-radius:20px}
+.footer{margin-top:28px;font-size:11px;color:rgba(139,100,20,0.4);letter-spacing:0.5px}
+</style>
 </head>
 <body>
-    <div class="container">
-        <img src="icon.png" alt="Must Know Scriptures icon" class="icon">
+<div class="bg-lines"></div>
+<div class="wrap">
 
-        <h1>Must Know Scriptures</h1>
-        <p class="author">By Bishop Dag Heward-Mills</p>
-        <p class="tagline">Memorize 1,000+ curated Bible verses with interactive flip cards. Track your progress and grow in God's Word daily.</p>
-        <p class="verse">"Thy word have I hid in mine heart." — Psalm 119:11</p>
-
-        <div class="buttons">
-            <a href="https://apps.apple.com/app/must-know-scriptures/id6793665911" class="btn btn-ios">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="white" aria-hidden="true">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                </svg>
-                <div class="btn-text">
-                    <span class="btn-sub">Download on the</span>
-                    <span class="btn-main">App Store</span>
-                </div>
-            </a>
-
-            <a href="https://play.google.com/store/apps/details?id=com.udolgc.mustknow" class="btn btn-android">
-                <svg width="22" height="24" viewBox="0 0 512 512" fill="white" aria-hidden="true">
-                    <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l232.6-232.6L47 0zm425.6 225.6l-58.9-34-67.7 67.8 67.7 67.7 59.1-34c16.8-9.6 16.8-35.9 0-45.5zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
-                </svg>
-                <div class="btn-text">
-                    <span class="btn-sub">Get it on</span>
-                    <span class="btn-main">Google Play</span>
-                </div>
-            </a>
-        </div>
-
-        <hr class="divider">
-
-        <div class="features">
-            <div class="feature">
-                <span class="feature-icon">🃏</span>
-                <div class="feature-title">Flip Cards</div>
-                <div class="feature-desc">Tap to reveal and memorize</div>
-            </div>
-            <div class="feature">
-                <span class="feature-icon">📖</span>
-                <div class="feature-title">Daily Verse</div>
-                <div class="feature-desc">New scripture every day</div>
-            </div>
-            <div class="feature">
-                <span class="feature-icon">🔥</span>
-                <div class="feature-title">Study Streak</div>
-                <div class="feature-desc">Stay consistent daily</div>
-            </div>
-            <div class="feature">
-                <span class="feature-icon">🔊</span>
-                <div class="feature-title">Audio Playback</div>
-                <div class="feature-desc">Hear verses read aloud</div>
-            </div>
-        </div>
-
-        <div class="languages">
-            <span class="lang">🇬🇧 English (KJV)</span>
-            <span class="lang">🇫🇷 Français (LSG)</span>
-            <span class="lang">🇪🇸 Español (RVR)</span>
-            <span class="lang">🇵🇹 Português (ARC)</span>
+    <div class="top">
+        <img src="icon.png" class="app-icon" alt="Must Know Scriptures">
+        <div class="titles">
+            <div class="app-name">Must Know<br>Scriptures</div>
+            <div class="app-by">By Bishop Dag Heward-Mills</div>
         </div>
     </div>
+
+    <div class="divider-ornament">— ✦ —</div>
+
+    <p class="verse">"Thy word have I hid in mine heart, that I might not sin against thee."</p>
+    <p class="ref">Psalm 119:11</p>
+
+    <div class="buttons">
+        <a href="https://apps.apple.com/app/must-know-scriptures/id6793665911" class="btn btn-ios">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#fdf6e3">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <div class="btn-text">
+                <span class="btn-sub">Download on the</span>
+                <span class="btn-main">App Store</span>
+            </div>
+        </a>
+
+        <a href="https://play.google.com/store/apps/details?id=com.udolgc.mustknow" class="btn btn-android">
+            <svg width="22" height="22" viewBox="0 0 48 48">
+                <path fill="#4CAF50" d="M5 7.1L26.4 24 5 40.9V7.1z"/>
+                <path fill="#FF3D00" d="M33.5 16.5L9.4 3.2 27.7 24l5.8-7.5z"/>
+                <path fill="#FFD600" d="M33.5 31.5L9.4 44.8 27.7 24l5.8 7.5z"/>
+                <path fill="#448AFF" d="M34.5 17.9l-6.8 6.1 6.8 6.1 6.6-3.8c1.9-1.1 1.9-3.6 0-4.7l-6.6-3.7z"/>
+            </svg>
+            <div class="btn-text">
+                <span class="btn-sub">Download on</span>
+                <span class="btn-main">Google Play</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="sep"></div>
+
+    <div class="langs">
+        <span class="lang">🇬🇧 English (KJV)</span>
+        <span class="lang">🇫🇷 Français (LSG)</span>
+        <span class="lang">🇪🇸 Español (RVR)</span>
+        <span class="lang">🇵🇹 Português (ARC)</span>
+    </div>
+
+    <p class="footer">© 2025 Mustard Inc</p>
+</div>
 </body>
 </html>
