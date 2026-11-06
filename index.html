@@ -3,9 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Service - Must Know Scriptures</title>
-<link rel="icon" type="image/png" href="https://mustknowscriptures.simplysend.net/icon.png">
-<link rel="apple-touch-icon" href="https://mustknowscriptures.simplysend.net/icon.png">
+<title>Must Know Scriptures</title>
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+
+<meta property="og:title" content="Must Know Scriptures">
+<meta property="og:description" content="Memorize 1,000+ Bible verses with flip cards in 4 languages. By Bishop Dag Heward-Mills.">
+<meta property="og:image" content="https://mustknowscriptures.simplysend.net/icon.png">
+<meta property="og:url" content="https://mustknowscriptures.simplysend.net">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mustknowscriptures.simplysend.net/icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,10 +25,11 @@ body {
     font-family: 'Inter', sans-serif;
     background: #fdf6e3;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 48px 24px;
     position: relative;
-    color: #2c1a00;
-    line-height: 1.7;
 }
 .bg-lines {
     position: fixed;
@@ -30,168 +39,226 @@ body {
     z-index: 0;
 }
 .wrap {
-    max-width: 720px;
-    margin: 0 auto;
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     position: relative;
     z-index: 1;
 }
-.header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-.header-icon {
-    width: 72px;
-    height: 72px;
-    border-radius: 16px;
+.app-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 22px;
     border: 2px solid #c8a84b;
     object-fit: cover;
     display: block;
     margin: 0 auto 20px;
 }
-h1 {
+.app-name {
     font-family: 'Playfair Display', serif;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 900;
     color: #2c1a00;
     line-height: 1.1;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
-.meta {
+.app-by {
     font-size: 13px;
     color: #8b6914;
     letter-spacing: 0.5px;
+    margin-bottom: 32px;
 }
 .divider-ornament {
     color: #c8a84b;
     font-size: 18px;
     letter-spacing: 8px;
-    text-align: center;
-    margin: 32px 0;
+    margin-bottom: 24px;
     opacity: 0.6;
 }
-h2 {
+.verse {
     font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #2c1a00;
-    margin-top: 36px;
-    margin-bottom: 14px;
-    line-height: 1.3;
-}
-p {
-    font-size: 16px;
+    font-style: italic;
+    font-size: 18px;
     color: #3d2800;
-    margin-bottom: 14px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    max-width: 340px;
 }
-ul {
-    margin-left: 24px;
-    margin-bottom: 14px;
-}
-li {
-    font-size: 16px;
-    color: #3d2800;
-    margin-bottom: 8px;
-}
-a {
-    color: #8b6914;
-    text-decoration: none;
+.ref {
+    font-size: 11px;
+    color: #c8a84b;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     font-weight: 600;
-    border-bottom: 1px solid rgba(200,168,75,0.4);
+    margin-bottom: 36px;
 }
-a:hover { color: #c8a84b; }
-em { font-style: italic; }
-strong { font-weight: 700; color: #2c1a00; }
-.footer {
-    margin-top: 48px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(200,168,75,0.3);
-    text-align: center;
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 36px;
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 16px 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    width: 100%;
+    transition: opacity 0.15s;
+}
+.btn:hover { opacity: 0.88; }
+.btn-ios { background: #2c1a00; color: #fdf6e3; }
+.btn-android { background: #c8a84b; color: #fff; }
+.btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+}
+.btn-sub { font-size: 11px; opacity: 0.65; font-weight: 400; }
+.btn-main { font-size: 18px; font-weight: 700; }
+.sep {
+    width: 60px;
+    height: 1px;
+    background: rgba(200,168,75,0.4);
+    margin: 0 auto 32px;
+}
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 32px;
+}
+.feature {
+    background: rgba(200,168,75,0.1);
+    border: 1px solid rgba(200,168,75,0.25);
+    border-radius: 14px;
+    padding: 18px 16px;
+    text-align: left;
+}
+.feature-emoji { font-size: 24px; margin-bottom: 10px; display: block; }
+.feature-title { font-size: 14px; font-weight: 700; color: #2c1a00; margin-bottom: 4px; }
+.feature-desc { font-size: 12px; color: #8b6914; line-height: 1.4; }
+.sep2 {
+    width: 60px;
+    height: 1px;
+    background: rgba(200,168,75,0.4);
+    margin: 0 auto 24px;
+}
+.langs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+.lang {
     font-size: 12px;
-    color: rgba(139,100,20,0.6);
+    color: #8b6914;
+    background: rgba(200,168,75,0.12);
+    border: 1px solid rgba(200,168,75,0.3);
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+.footer {
+    margin-top: 32px;
+    font-size: 11px;
+    color: rgba(139,100,20,0.4);
     letter-spacing: 0.5px;
+    line-height: 1.8;
 }
 .footer a {
     color: rgba(139,100,20,0.7);
-    border: none;
-    margin: 0 10px;
+    text-decoration: none;
+    margin: 0 6px;
 }
+.footer a:hover { color: #c8a84b; }
 </style>
 </head>
 <body>
 <div class="bg-lines"></div>
 <div class="wrap">
 
-    <div class="header">
-        <img src="https://mustknowscriptures.simplysend.net/icon.png" class="header-icon" alt="Must Know Scriptures">
-        <h1>Terms of Service</h1>
-        <p class="meta">Must Know Scriptures &middot; Last updated 6 November 2026</p>
+    <img src="icon.png" class="app-icon" alt="Must Know Scriptures">
+    <div class="app-name">Must Know<br>Scriptures</div>
+    <div class="app-by">By Bishop Dag Heward-Mills</div>
+
+    <div class="divider-ornament">— ✦ —</div>
+
+    <p class="verse">"Thy word have I hid in mine heart, that I might not sin against thee."</p>
+    <p class="ref">Psalm 119:11</p>
+
+    <div class="buttons">
+        <a href="https://apps.apple.com/app/must-know-scriptures/id6793665911" class="btn btn-ios">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#fdf6e3">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <div class="btn-text">
+                <span class="btn-sub">Download on the</span>
+                <span class="btn-main">App Store</span>
+            </div>
+        </a>
+
+        <a href="https://play.google.com/store/apps/details?id=com.udolgc.mustknow" class="btn btn-android">
+            <svg width="24" height="24" viewBox="0 0 48 48">
+                <path fill="#4CAF50" d="M5 7.1L26.4 24 5 40.9V7.1z"/>
+                <path fill="#FF3D00" d="M33.5 16.5L9.4 3.2 27.7 24l5.8-7.5z"/>
+                <path fill="#FFD600" d="M33.5 31.5L9.4 44.8 27.7 24l5.8 7.5z"/>
+                <path fill="#448AFF" d="M34.5 17.9l-6.8 6.1 6.8 6.1 6.6-3.8c1.9-1.1 1.9-3.6 0-4.7l-6.6-3.7z"/>
+            </svg>
+            <div class="btn-text">
+                <span class="btn-sub">Download on</span>
+                <span class="btn-main">Google Play</span>
+            </div>
+        </a>
     </div>
 
-    <div class="divider-ornament">— ✦ —</div>
+    <div class="sep"></div>
 
-    <p>These Terms of Service ("Terms") govern your use of the Must Know Scriptures mobile application ("the App"), published by Mustard Inc. ("we", "us", "our"). By downloading, installing, or using the App, you agree to these Terms. If you do not agree, please do not use the App.</p>
+    <div class="features">
+        <div class="feature">
+            <span class="feature-emoji">🃏</span>
+            <div class="feature-title">Flip Cards</div>
+            <div class="feature-desc">Tap to reveal and memorize each verse</div>
+        </div>
+        <div class="feature">
+            <span class="feature-emoji">📅</span>
+            <div class="feature-title">Daily Verse</div>
+            <div class="feature-desc">A new scripture to meditate on daily</div>
+        </div>
+        <div class="feature">
+            <span class="feature-emoji">🔥</span>
+            <div class="feature-title">Streaks</div>
+            <div class="feature-desc">Build consistency day after day</div>
+        </div>
+        <div class="feature">
+            <span class="feature-emoji">🔊</span>
+            <div class="feature-title">Audio</div>
+            <div class="feature-desc">Hear verses read aloud in your language</div>
+        </div>
+    </div>
 
-    <h2>1. About the App</h2>
-    <p>Must Know Scriptures is a free mobile application designed to help users systematically learn and memorize Bible verses. It is available on Android and iOS and is based on the curated scripture selections from the book <em>Bible Memorisation Handbook</em> by Bishop Dag Heward-Mills.</p>
+    <div class="sep2"></div>
 
-    <h2>2. Licence to Use</h2>
-    <p>We grant you a limited, non-exclusive, non-transferable, revocable licence to use the App for personal, non-commercial purposes in accordance with these Terms. You may not:</p>
-    <ul>
-        <li>Copy, modify, distribute, sell, or lease any part of the App;</li>
-        <li>Reverse engineer or attempt to extract the source code of the App;</li>
-        <li>Use the App in any way that could harm Mustard Inc., other users, or any third party.</li>
-    </ul>
+    <div class="langs">
+        <span class="lang">🇬🇧 English (KJV)</span>
+        <span class="lang">🇫🇷 Français (LSG)</span>
+        <span class="lang">🇪🇸 Español (RVR)</span>
+        <span class="lang">🇵🇹 Português (ARC)</span>
+    </div>
 
-    <h2>3. Content and Intellectual Property</h2>
-    <p>Bible texts in the App are drawn from translations in the public domain (the King James Version in English, Louis Segond 1910 in French, Reina-Valera 1960 in Spanish, and Almeida Corrigida Fiel in Portuguese). The selection and arrangement of scriptures reflects the structure of <em>Bible Memorisation Handbook</em> by Bishop Dag Heward-Mills, used with the appropriate permissions.</p>
-    <p>The App itself, including its design, code, branding, and the "Must Know Scriptures" name, are the intellectual property of Mustard Inc. and are protected by applicable copyright and trademark laws.</p>
-
-    <h2>4. Donations</h2>
-    <p>The App is free to use. Users on Android may choose to make voluntary donations to support ongoing development and maintenance. Donations are processed through Paystack, a third-party payment provider. By making a donation you agree that:</p>
-    <ul>
-        <li>Donations are voluntary and non-refundable;</li>
-        <li>Donations do not purchase any digital goods, premium features, or services;</li>
-        <li>Your payment details are handled by Paystack under their own terms and privacy policy.</li>
-    </ul>
-
-    <h2>5. User Accounts</h2>
-    <p>The App does not require you to create an account or provide personal identifying information to use its core features. Any favourites, progress, or preferences are stored locally on your device.</p>
-
-    <h2>6. Third-Party Services</h2>
-    <p>The App relies on third-party services to function, including but not limited to:</p>
-    <ul>
-        <li>Google Play Services and the Apple App Store for distribution and updates;</li>
-        <li>JSONSilo for scripture data hosting;</li>
-        <li>Paystack for donation processing on Android.</li>
-    </ul>
-    <p>Your use of these services is governed by their respective terms and privacy policies. We are not responsible for their availability, performance, or policies.</p>
-
-    <h2>7. Disclaimer of Warranties</h2>
-    <p>The App is provided on an "as is" and "as available" basis. To the fullest extent permitted by law, we make no warranties, express or implied, regarding the App's reliability, accuracy, availability, or suitability for any particular purpose. While we take care to present scripture content accurately, we do not warrant that the App is free from errors, omissions, or interruptions.</p>
-
-    <h2>8. Limitation of Liability</h2>
-    <p>To the fullest extent permitted by applicable law, Mustard Inc. and its officers, employees, and contributors shall not be liable for any indirect, incidental, special, consequential, or exemplary damages arising out of or in connection with your use of, or inability to use, the App, even if advised of the possibility of such damages.</p>
-
-    <h2>9. Changes to the App and These Terms</h2>
-    <p>We may update the App and these Terms from time to time. When we do, we will update the "Last updated" date above. Significant changes will be communicated through the App or its store listing where reasonably practical. Your continued use of the App after changes take effect constitutes acceptance of the updated Terms.</p>
-
-    <h2>10. Termination</h2>
-    <p>We reserve the right to suspend or discontinue the App, or any part of it, at any time without notice. You may stop using the App at any time by uninstalling it from your device.</p>
-
-    <h2>11. Governing Law</h2>
-    <p>These Terms are governed by the laws of the Republic of Ghana. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts of Ghana.</p>
-
-    <h2>12. Contact</h2>
-    <p>If you have questions about these Terms, please contact us at <a href="mailto:udolgc.dev@gmail.com">udolgc.dev@gmail.com</a>.</p>
-
-    <div class="divider-ornament">— ✦ —</div>
-
-    <div class="footer">
-        <a href="/">Home</a> &middot; <a href="terms.html">Terms</a>
-        <br><br>
+    <p class="footer">
+        <a href="terms.html">Terms of Service</a> &middot; <a href="privacy.html">Privacy Policy</a>
+        <br>
         © 2026 Mustard Inc
-    </div>
-
+    </p>
 </div>
 </body>
 </html>
